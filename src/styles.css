@@ -4,11 +4,15 @@
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   color: #333;
+  display: grid;
+  align-content: center;
+  min-height: 80vh;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .container {
   max-width: 1000px;
-  margin: 0 auto;
 }
 
 .page {

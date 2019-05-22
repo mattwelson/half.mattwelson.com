@@ -15,45 +15,48 @@ const useHalfMarathonInterval = () => {
   return halfInterval
 }
 
-function CountdownContainer() {
+function CountdownContainer({ test }) {
   const halfInterval = useHalfMarathonInterval()
   return (
-    <div className="App container">
+    <div className="container">
       <div className="page">
         <h1>Queenstown Half Marathon</h1>
         <Countdown weeks={halfInterval.weeks} days={halfInterval.days} />
         <h3>{HALF_MARATHON_DATE.toFormat('dd MMMM yyyy')}</h3>
       </div>
+      {test && (
+        <>
+          <div className="page">
+            <h1>Faked - 13 weeks out</h1>
+            <Countdown weeks={13} days={halfInterval.days} />
+          </div>
 
-      <div className="page">
-        <h1>Faked - 13 weeks out</h1>
-        <Countdown weeks={13} days={halfInterval.days} />
-      </div>
+          <div className="page">
+            <h1>Faked - 7 weeks out</h1>
+            <Countdown weeks={7} days={halfInterval.days} />
+          </div>
 
-      <div className="page">
-        <h1>Faked - 7 weeks out</h1>
-        <Countdown weeks={7} days={halfInterval.days} />
-      </div>
+          <div className="page">
+            <h1>Faked - 1 week out</h1>
+            <Countdown weeks={1} days={halfInterval.days} />
+          </div>
 
-      <div className="page">
-        <h1>Faked - 1 week out</h1>
-        <Countdown weeks={1} days={halfInterval.days} />
-      </div>
+          <div className="page">
+            <h1>Faked - 4 days out</h1>
+            <Countdown weeks={0} days={4} />
+          </div>
 
-      <div className="page">
-        <h1>Faked - 4 days out</h1>
-        <Countdown weeks={0} days={4} />
-      </div>
+          <div className="page">
+            <h1>Faked - day of</h1>
+            <Countdown weeks={0} days={0} />
+          </div>
 
-      <div className="page">
-        <h1>Faked - day of</h1>
-        <Countdown weeks={0} days={0} />
-      </div>
-
-      <div className="page">
-        <h1>Faked - 4 days after</h1>
-        <Countdown weeks={0} days={-4} />
-      </div>
+          <div className="page">
+            <h1>Faked - 4 days after</h1>
+            <Countdown weeks={0} days={-4} />
+          </div>
+        </>
+      )}
     </div>
   )
 }
