@@ -1,0 +1,43 @@
+.chart__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.chart__progress {
+  margin-top: 1rem;
+  height: 1rem;
+  background-attachment: fixed;
+  grid-column: 1 / span 3;
+  justify-self: end;
+}
+
+.chart__underline {
+  height: 0.25rem;
+  background: grey;
+  grid-column: 1 / span 3;
+}
+
+.chart__tick {
+  width: 0.25rem;
+  height: 0.5rem;
+  background: grey;
+}
+
+.chart__label {
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+
+.chart__icon--1,
+.chart__label--1 {
+  justify-self: start;
+}
+
+.chart__tick--2,
+.chart__icon--2 {
+  justify-self: center;
+}
+.chart__tick--3,
+.chart__icon--3 {
+  justify-self: end;
+}

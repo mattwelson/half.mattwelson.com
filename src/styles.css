@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+.App {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #333;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page {
+  min-height: 50vh;
+  display: grid;
+  align-content: center;
+}
