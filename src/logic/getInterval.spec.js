@@ -6,7 +6,8 @@ it("Shows one day when there's one day remaining", () => {
     DateTime.fromFormat("15/11/2019 10:20", "dd/MM/yyyy HH:mm")
   );
   expect(result.months).toBe(0);
-  expect(Math.round(result.days)).toBe(1);
+  expect(Math.round(result.days)).toBe(0);
+  expect(Math.round(result.hours)).toBe(22);
 });
 
 it("Shows zero days or months on the day", () => {
